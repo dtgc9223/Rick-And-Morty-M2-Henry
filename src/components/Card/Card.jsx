@@ -24,8 +24,9 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
             setIsFav(true);
          }
       });
-   }, [myFavorites]);
-
+   }, 
+   [myFavorites]);
+   
    return (
       <div className={style.card}>
 
@@ -35,11 +36,13 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
 
 
          <div className={style.back} >
+
             <div>
                <Link to={`/detail/${id}`} className={style.link}>
                   <h2 className={style.name}>{name}</h2>
                </Link>
             </div>
+
 
             <div className={style.species} >
                <h2>Specie: {species}</h2>
